@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "sa-lab"
+name = "sample-parser"
 version = "0.1.0"
 dependencies = [
  "anyhow",

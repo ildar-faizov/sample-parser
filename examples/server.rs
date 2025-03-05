@@ -1,4 +1,4 @@
-use sa_lab::DataFrame;
+use sample_parser::DataFrame;
 use std::net::{TcpListener, TcpStream};
 
 const ADDR: &str = "127.0.0.1:8080";
@@ -11,7 +11,7 @@ fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-fn handle_client(mut stream: TcpStream) -> Result<(), sa_lab::ParseError> {
+fn handle_client(mut stream: TcpStream) -> Result<(), sample_parser::ParseError> {
     let frame = DataFrame::parse(&mut stream)?;
     println!("{frame:?}");
     Ok(())
